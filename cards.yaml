@@ -1,0 +1,6 @@
+path: dataset
+train: Images/train
+val: Images/val
+
+names:
+  0: card
