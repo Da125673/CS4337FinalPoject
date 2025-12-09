@@ -1,0 +1,26 @@
+# For YOLOv8 training and inference
+ultralytics==8.1.0
+
+# Deep learning (CNN training)
+torch
+torchvision
+torchaudio
+
+# Image processing
+opencv-python
+Pillow
+
+# Dataset utilities
+scikit-learn
+numpy
+pandas
+
+# JSON + file handling
+tqdm
+
+# Camera stream (Live_camera.py)
+imutils
+
+# Optional: GPU support (only works if you have CUDA)
+# torch==2.3.0+cu121
+# torchvision==0.18.0+cu121
