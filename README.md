@@ -10,10 +10,19 @@ This project detects playing cards from a live camera feed using a YOLO model fo
 - Classifies rank (A, 2–10, J, Q, K) and suit (Clubs, Diamonds, Hearts, Spades) using a CNN.  
 - Displays bounding boxes and predicted labels on the live camera feed.  
 - Evaluate CNN performance using `CNN_test.py` to view accuracy and confusion matrix.
-- Below there is the confusion matrixes for bot rank and suit
+- Confusion matrices for both rank and suit are provided below.
 
 ---
 
+## Example Outputs
+
+### Rank CNN Confusion Matrix
+![Rank CNN](CNNData/Rank_CNN_confusion_matrix.png)
+
+### Suit CNN Confusion Matrix
+![Suit CNN](CNNData/Suit_CNN_confusion_matrix.png)
+
+---
 ## Setup
 
 ### 1. Create a Virtual Environment
@@ -29,13 +38,3 @@ python -m venv projectenv
 source projectenv/bin/activate
 # On Windows:
 projectenv\Scripts\activate
-
----
-
-## Example Outputs
-
-### Rank CNN Confusion Matrix
-![Rank CNN](CNNData/Rank_CNN_confusion_matrix.png)
-
-### Suit CNN Confusion Matrix
-![Suit CNN](CNNData/Suit_CNN_confusion_matrix.png)
