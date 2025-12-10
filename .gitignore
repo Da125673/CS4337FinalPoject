@@ -1,0 +1,74 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pth
+*.p
+
+# Virtual environments
+env/
+venv/
+projectenv/
+.venv/
+
+# Jupyter and cache
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Torch / Ultralytics cache
+*.pt
+*.pth
+runs/
+logs/
+wandb/
+.cache/
+ultralytics/
+
+# -------------------------
+# Datasets (do NOT commit)
+# -------------------------
+datasets/
+cropped_cards/
+raw_cards/
+images/
+labels/
+*.jpg
+*.png
+
+# Optionally keep the folder but ignore contents:
+# cropped_cards/*
+
+# -------------------------
+# OS / Editor junk
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# -------------------------
+# Node / Web
+# -------------------------
+node_modules/
+dist/
+build/
+
+# -------------------------
+# Compiled code
+# -------------------------
+*.o
+*.so
+*.dll
+*.exe
+
+# -------------------------
+# Misc
+# -------------------------
+*.zip
+*.tar
+*.gz
