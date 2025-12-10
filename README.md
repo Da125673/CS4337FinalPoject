@@ -9,7 +9,7 @@ This project detects playing cards from a live camera feed using a YOLO model fo
 - Detects cards in real-time using YOLO.  
 - Classifies rank (A, 2–10, J, Q, K) and suit (Clubs, Diamonds, Hearts, Spades) using a CNN.  
 - Displays bounding boxes and predicted labels on the live camera feed.  
-- Evaluate CNN performance using `CNN_test.py` to view accuracy and confusion matrix.
+- Evaluate CNN performance using `two-stagecode/CNN_test.py` to view accuracy and confusion matrix.
 - Confusion matrices for both rank and suit are provided below.
 
 ---
