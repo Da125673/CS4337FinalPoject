@@ -37,7 +37,6 @@ raw_cards/
 images/
 labels/
 *.jpg
-*.png
 
 # Optionally keep the folder but ignore contents:
 # cropped_cards/*
