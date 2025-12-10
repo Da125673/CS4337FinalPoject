@@ -38,3 +38,8 @@ python -m venv projectenv
 source projectenv/bin/activate
 # On Windows:
 projectenv\Scripts\activate
+
+
+# If running into issues for ultralytics do the following 
+# Install the ultralytics package from GitHub
+pip install git+https://github.com/ultralytics/ultralytics.git@main
