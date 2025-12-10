@@ -5,6 +5,8 @@ from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader
 from sklearn.metrics import confusion_matrix, classification_report
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # -------------------------
 # Config
@@ -18,6 +20,10 @@ RANK_MODEL_PATH = "models/rank_classifier.pth"
 SUIT_MODEL_PATH = "models/suit_classifier.pth"
 RANK_DATA_DIR = "cropped_cards/rank"
 SUIT_DATA_DIR = "cropped_cards/suit"
+
+# Output folder
+OUTPUT_DIR = "CNNData"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Classes
 RANK_CLASSES = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
@@ -71,8 +77,21 @@ def evaluate_model(model, loader, class_names, name="Model"):
 
     print(f"\n=== {name} Evaluation ===")
     print(classification_report(all_labels, all_preds, target_names=class_names))
+    
+    cm = confusion_matrix(all_labels, all_preds)
     print("Confusion Matrix:")
-    print(confusion_matrix(all_labels, all_preds))
+    print(cm)
+
+    # Plot confusion matrix
+    plt.figure(figsize=(10,8))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
+    plt.xlabel("Predicted")
+    plt.ylabel("Actual")
+    plt.title(f"{name} Confusion Matrix")
+    
+    # Save figure
+    plt.savefig(os.path.join(OUTPUT_DIR, f"{name}_confusion_matrix.png"))
+    plt.close()
 
 # -------------------------
 # Load datasets
@@ -83,5 +102,5 @@ suit_loader, _ = get_loader(SUIT_DATA_DIR)
 # -------------------------
 # Evaluate
 # -------------------------
-evaluate_model(rank_model, rank_loader, RANK_CLASSES, name="Rank CNN")
-evaluate_model(suit_model, suit_loader, SUIT_CLASSES, name="Suit CNN")
+evaluate_model(rank_model, rank_loader, RANK_CLASSES, name="Rank_CNN")
+evaluate_model(suit_model, suit_loader, SUIT_CLASSES, name="Suit_CNN")
