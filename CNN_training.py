@@ -9,8 +9,8 @@ from torch.utils.data import DataLoader
 # Config
 # -------------------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-BATCH_SIZE = 32
-NUM_EPOCHS = 10
+NUM_EPOCHS = 40
+BATCH_SIZE = 64
 LEARNING_RATE = 1e-3
 
 # Choose dataset: "rank" or "suit"
@@ -21,10 +21,14 @@ DATA_DIR = os.path.join("cropped_cards", DATASET_TYPE)
 # Data Transforms
 # -------------------------
 transform = transforms.Compose([
-    transforms.Resize((128, 128)),      # Resize crops to 128x128
+    transforms.Resize((128, 128)),
+    transforms.RandomRotation(10),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2),
+    transforms.RandomResizedCrop(128, scale=(0.8, 1.0)),
     transforms.ToTensor(),
     transforms.Normalize([0.5,0.5,0.5], [0.5,0.5,0.5])
 ])
+
 
 # -------------------------
 # Datasets & Dataloaders

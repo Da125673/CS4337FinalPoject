@@ -1,6 +1,7 @@
-path: dataset
-train: Images/train
-val: Images/val
+# cards.yaml
+path: dataset  # root folder of your YOLO dataset
+train: images/train
+val: images/val
 
-names:
-  0: card
+nc: 1  # number of classes (cards are all 1 class here)
+names: ["card"]  # class names
