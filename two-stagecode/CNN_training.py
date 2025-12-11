@@ -8,7 +8,6 @@ from torch.utils.data import DataLoader
 # -------------------------
 # Config
 # -------------------------
-q
 
 # Choose dataset: "rank" or "suit"
 DATASET_TYPE = "suit"   # set to "suit" for suit classification
