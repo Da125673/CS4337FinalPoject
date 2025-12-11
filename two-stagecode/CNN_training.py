@@ -8,10 +8,7 @@ from torch.utils.data import DataLoader
 # -------------------------
 # Config
 # -------------------------
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-NUM_EPOCHS = 40
-BATCH_SIZE = 64
-LEARNING_RATE = 1e-3
+q
 
 # Choose dataset: "rank" or "suit"
 DATASET_TYPE = "suit"   # set to "suit" for suit classification
