@@ -24,6 +24,14 @@ This project detects playing cards from a live camera feed using a YOLO model fo
 ### Suit CNN Confusion Matrix
 ![Suit CNN](CNNData/Suit_CNN_confusion_matrix.png)
 
+
+## Dataset
+This project uses the following dataset:
+
+Shah, J. P. *The Complete Playing Card Dataset*. Kaggle, 2021.  
+https://www.kaggle.com/datasets/jaypradipshah/the-complete-playing-card-dataset
+
+
 ---
 ## Setup
 
