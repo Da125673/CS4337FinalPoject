@@ -25,13 +25,17 @@ Follow these steps to install everything required to run the project:
 2. **training one-stagecode and running**
     ```bash
     python one-stagecode/train_single_stage.py
-    run with 
+
+    Once training complete run live demo by: 
+
     python one-stagecode/realtime_single_stage.py
 
 
 2. **training two-stagecode and running**
     ```bash
     python two-stagecode/CNN_training.py
-    run with 
+
+    Once training complete run live demo by: 
+    
     python two-stagecode/Live_camara.py
 
