@@ -1,55 +1,40 @@
-# Card Detection and Classification
+# CS4337 Final Project
 
-This project detects playing cards from a live camera feed using a YOLO model for object detection and a CNN for card rank and suit classification.
-
----
-
-## Features
-
-- Detects cards in real-time using YOLO.  
-- Classifies rank (A, 2–10, J, Q, K) and suit (Clubs, Diamonds, Hearts, Spades) using a CNN.  
-- Displays bounding boxes and predicted labels on the live camera feed.  
-- you need to create an enviorment before running anything look below for the code to do so
-- Evaluate CNN performance using `python two-stagecode/CNN_test.py` to view accuracy and confusion matrix.
-- Confusion matrices for both rank and suit are provided below.
-- To run the camera you need to use `python two-stagecode/Live_camera.py`
+This repository contains the complete source code for the CS4337 Final Project.  
+All Python scripts used for the project are included and organized for easy execution.  
+A `requirements.txt` file is provided listing every library needed to run the code.
 
 ---
 
-## Example Outputs
-
-### Rank CNN Confusion Matrix
-![Rank CNN](CNNData/Rank_CNN_confusion_matrix.png)
-
-### Suit CNN Confusion Matrix
-![Suit CNN](CNNData/Suit_CNN_confusion_matrix.png)
-
-
-## Dataset
-This project uses the following dataset:
-
-Shah, J. P. *The Complete Playing Card Dataset*. Kaggle, 2021.  
-https://www.kaggle.com/datasets/jaypradipshah/the-complete-playing-card-dataset
-
+## Source Code Repository
+GitHub Repository Link:  
+<[PASTE YOUR REPO LINK HERE](https://github.com/Da125673/CS4337FinalPoject.git)>
 
 ---
-## Setup
 
-### 1. Create a Virtual Environment
+## Setup Instructions
 
-It is recommended to create a virtual environment before installing dependencies:
+Follow these steps to install everything required to run the project:
 
-```bash
-# Create a virtual environment named projectenv
-python -m venv projectenv
-
-# Activate the environment
-# On macOS/Linux:
-source projectenv/bin/activate
-# On Windows:
-projectenv\Scripts\activate
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Da125673/CS4337FinalPoject.git
+   cd <CS4337FinalPoject>
+   pip install -r requirements.txt
 
 
-# If running into issues for ultralytics do the following 
-# Install the ultralytics package from GitHub
-pip install git+https://github.com/ultralytics/ultralytics.git@main
+2. **training one-stagecode and running**
+    python one-stagecode/train_single_stage.py
+
+    run with 
+
+    python one-stagecode/realtime_single_stage.py
+
+
+2. **training two-stagecode and running**
+    python two-stagecode/CNN_training.py
+
+    run with 
+
+    python two-stagecode/Live_camara.py
+
