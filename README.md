@@ -7,8 +7,7 @@ A `requirements.txt` file is provided listing every library needed to run the co
 ---
 
 ## Source Code Repository
-GitHub Repository Link:  
-<[PASTE YOUR REPO LINK HERE](https://github.com/Da125673/CS4337FinalPoject.git)>
+Scroll to top of page and locate the green "code" button click it and copy the given HTTPS URL
 
 ---
 
@@ -24,17 +23,15 @@ Follow these steps to install everything required to run the project:
 
 
 2. **training one-stagecode and running**
+    ```bash
     python one-stagecode/train_single_stage.py
-
     run with 
-
     python one-stagecode/realtime_single_stage.py
 
 
 2. **training two-stagecode and running**
+    ```bash
     python two-stagecode/CNN_training.py
-
     run with 
-
     python two-stagecode/Live_camara.py
 
