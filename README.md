@@ -15,6 +15,24 @@ Scroll to top of page and locate the green "code" button click it and copy the g
 
 Follow these steps to install everything required to run the project:
 
+0. **Create a Virtual Enviorment**
+    It is recommended to create a virtual enviorment before installing dependencies 
+
+    ```bash
+    # Create a virtual environment named projectenv
+    python -m venv projectenv
+
+    # Activate the environment
+    # On macOS/Linux:
+    source projectenv/bin/activate
+    # On Windows:
+    projectenv\Scripts\activate
+
+
+    # If running into issues for ultralytics do the following 
+    # Install the ultralytics package from GitHub
+    pip install git+https://github.com/ultralytics/ultralytics.git@main
+
 1. **Download database and insert into /dataset**
     ```bash
     https://www.kaggle.com/datasets/jaypradipshah/the-complete-playing-card-dataset
