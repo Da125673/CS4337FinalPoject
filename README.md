@@ -15,14 +15,19 @@ Scroll to top of page and locate the green "code" button click it and copy the g
 
 Follow these steps to install everything required to run the project:
 
-1. **Clone the repository**
+1. **Download database and insert into /dataset**
+    ```bash
+    https://www.kaggle.com/datasets/jaypradipshah/the-complete-playing-card-dataset
+
+
+2. **Clone the repository**
    ```bash
    git clone https://github.com/Da125673/CS4337FinalPoject.git
    cd <CS4337FinalPoject>
    pip install -r requirements.txt
 
 
-2. **training one-stagecode and running**
+3. **training one-stagecode and running**
     ```bash
     python one-stagecode/train_single_stage.py
 
@@ -31,11 +36,11 @@ Follow these steps to install everything required to run the project:
     python one-stagecode/realtime_single_stage.py
 
 
-2. **training two-stagecode and running**
+4. **training two-stagecode and running**
     ```bash
     python two-stagecode/CNN_training.py
 
     Once training complete run live demo by: 
-    
+
     python two-stagecode/Live_camara.py
 
